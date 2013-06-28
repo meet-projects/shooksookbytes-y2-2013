@@ -1,0 +1,12 @@
+<html>
+<head>
+</head>
+
+<body>
+<form>
+	Full Name:
+	<input type="text" name="fullName">
+</form>
+</body>
+
+</html>

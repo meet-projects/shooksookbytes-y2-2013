@@ -1,0 +1,6 @@
+#ta{
+	width:380;
+	margin:10px;
+	margin-bottom:2;
+	max-width: 380;
+}
