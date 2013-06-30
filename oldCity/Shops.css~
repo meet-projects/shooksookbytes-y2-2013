@@ -1,0 +1,9 @@
+h1{color:#ffffff;font-size:1000px;font-weight:bold;text-align:center;}
+
+html{
+	background:url(http://upload.wikimedia.org/wikipedia/commons/a/a6/Jerusalem,_Old_City_Market_ap_021.jpg) no-repeat center center fixed;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+ background-size:cover;
+}
