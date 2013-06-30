@@ -1,0 +1,15 @@
+
+h1 {color : #DB944D; font-size :100px;font-style:italic;font-weight : bold;text-shadow ;text-align:center;
+text-shadow: 5px 5px 5px #FFCC66;}
+table {color : #462B0F;margin-left:480px;margin-top:50;}
+tr {padding:5px;text-align:center; }
+body {text-align:center; }
+
+html { 
+  background: url(old_jerusalem_2.JPG) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
