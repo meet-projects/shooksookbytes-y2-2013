@@ -5,14 +5,13 @@
 
 <body>
 <div>
-	<form name="input" action="review" method="post">
+	<form name="input" action="shop" method="post">
 		{% csrf_token %}
-	Full Name:
-	<input type="text" name="fullName">
-	<br>
-	Review:
-	<br>
-	<input type="text" id="ta" rows=3 name="review">
+
+	<input type="text" name="name">
+	<input type="text" name="location">
+	<input type="text" name="description">
+
 	<button type="submit" value="submit">Submit</button>
 	</form>
 </div>

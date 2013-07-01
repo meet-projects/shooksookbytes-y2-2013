@@ -1,12 +1,16 @@
 from django.conf.urls import patterns, include, url
-import views
+from oldCity_app import views
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-                       url(r'^review$',views.addReview, name='addReview')
-                       url(r'^shops/shop',views.addShop, name='addShop')
+    #url(r'^review$',views.addReview, name='addReview'),
+    url(r'^shops/shop$',views.addShop, name='addShop'),
+    url(r'^displayReview$',views.displayReviewForm),
+    url(r'^displayShops$',views.displayShops),
+    url(r'^shop$',views.addShop),
+    url(r'^review$',views.addReview),
     # Examples:
     # url(r'^$', 'oldCity.views.home', name='home'),
     # url(r'^oldCity/', include('oldCity.foo.urls')),

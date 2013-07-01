@@ -1,4 +1,4 @@
-from django.db import models, forms
+from django.db import models
 
 
 
@@ -11,5 +11,8 @@ class Shop(models.Model):
 class Reviews(models.Model):
 	review = models.CharField(max_length=1000)
 	name = models.CharField(max_length=20)
-	shop = models.ForiegnKey(Shop)
+	shop = models.ForeignKey('Shop')
+	def __unicode__(self):
+		return self.name
+	
 	

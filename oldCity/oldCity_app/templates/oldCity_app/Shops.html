@@ -1,19 +1,74 @@
 <html>
-
 <head>
-<link rel="stylesheet" type="text/css" href="Shops.css">
+<link rel="stylesheet" type = "text/css" href = "Tourists.CSS">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript">
+</script>
 </head>
-
 <body>
 
-<div>
-<h1>Shops</h1>
-</div>
+<h1> Shops </h1>
 
+<span>
+<table>
+<tr> 
+<input type="button" name="button" value="Home" style="width:200px;height:50px;color : #DB944D;font-size :20px;font-style:italic; background: transparent;border: none  ;">
+
+<input type="button" name="button" value="Shops" style="width:200px;height:50px;color : #DB944D;font-size :20px;font-style:italic; background: transparent;border: none ;">
+
+<input type="button" name="button" value="Archetectural Sites" style="width:250px;height:50px;color : #DB944D;font-size :20px;font-style:italic; background: transparent;border: none ;">
+
+<input type="button" name="button" value="Hotels" style="width:200px;height:50px;color : #DB944D;font-size :20px;font-style:italic;  background: transparent;border: none;">
+
+<input type="button" name="button" value="Resturants" style="width:200px;height:50px;color : #DB944D; font-size :20px;font-style:italic; background: transparent;border: none;">
+
+
+
+</tr>
+<tr><td>
+	<form name="input" action="shop" method="post">
+		{% csrf_token %}
+	name:
+	<input type="text" name="name">
+	<br>
+	location:
+	<br>
+	<input type="text" id="ta" rows=3 name="location">
+	<input type="text" id="ta" rows=3 name="description">
+	<button type="submit" value="submit">Submit</button>
+	</form>
+</td></tr>
+<tr>
+<td>
+	Stuff about the shops	
+</td>
+</tr>
+<tr><td>
+Write Review:<br>
+	<form name="input" action="review" method="post">
+		{% csrf_token %}
+	Full Name:
+	<input type="text" name="fullName">
+	<br>
+	Review:
+	<br>
+	<input type="text" id="ta" rows=3 name="review">
+	<input type="text" id="ta" rows=3 name="shop">
+	<button type="submit" value="submit">Submit</button>
+	</form>
+</td></tr>
+<tr><td>
+	{% for review in reviews %}
 <div>
-<p>a place for the list of the shops</p>
+Name: {{ review.name }}
+Review: {{ review.review }}
 </div>
+{% endfor %}
+</td></tr>
+</table>
+</span>
+
 
 </body>
-
 </html>
