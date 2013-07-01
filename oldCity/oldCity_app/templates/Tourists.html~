@@ -17,7 +17,7 @@
 
 <input type="button" name="button" value="Shops" style="width:200px;height:50px;color : #DB944D;font-size :20px; background: transparent;border: none ;"onclick="location.href='Shops.html';">
 
-<input type="button" name="button" value="Archetectural Sites" style="width:250px;height:50px;color : #DB944D;font-size :20px; background: transparent;border: none ;">
+<input type="button" name="button" value="Archetectural Sites" style="width:250px;height:50px;color : #DB944D;font-size :20px; background: transparent;border: none ;"onclick="location.href='Arche.Sites.html';">
 
 <input type="button" name="button" value="Hotels" style="width:200px;height:50px;color : #DB944D;font-size :20px;  background: transparent;border: none;">
 
@@ -29,6 +29,12 @@
 </table>
 </span>
 
+<img src="http://www.jerusalemshots.com/i/old_city/Jerusalem-Old-City-View4.jpg" alt="picture" style="width: 550px;
+height: 550px">
+
+<div id=round>
+<input type="button" name="button" value="" style="width=1;height=1;-moz-border-radius: 35px;border-radius: 35px;background: #DB944D;">
+</div>
 
 </body>
 </html>
