@@ -1,4 +1,6 @@
-from django.db import models
+from django.db import models, forms
+
+
 
 # Create your models here.
 class Shop(models.Model):
