@@ -5,7 +5,7 @@ import views
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-                       url(r'^shops/review',views.addReview, name='addReview')
+                       url(r'^review$',views.addReview, name='addReview')
                        url(r'^shops/shop',views.addShop, name='addShop')
     # Examples:
     # url(r'^$', 'oldCity.views.home', name='home'),
