@@ -29,4 +29,10 @@ def addShop(request):
 	location = request.POST['location']
 	description = request.POST['description']
 	Shop(name=name,location=location,description=description).save()
-	return render(request , 'displayShops',{})
+	return displayShops(request)
+
+def goToTourists(request):
+	return render(request,'oldCity_app/Tourists.html')
+
+def goToOldCity(request):
+	return render(request,'oldCity_app/old_city.html')

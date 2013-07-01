@@ -11,6 +11,8 @@ urlpatterns = patterns('',
     url(r'^displayShops$',views.displayShops),
     url(r'^shop$',views.addShop),
     url(r'^review$',views.addReview),
+    url(r'^tourists$',views.goToTourists),
+    url(r'^oldCity$',views.goToOldCity),
     # Examples:
     # url(r'^$', 'oldCity.views.home', name='home'),
     # url(r'^oldCity/', include('oldCity.foo.urls')),
