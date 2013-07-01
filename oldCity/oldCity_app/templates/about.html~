@@ -1,0 +1,31 @@
+<html>
+
+<head>
+<link rel="stylesheet" type = "text/css" href = "../static/css/About.css">
+</head>
+
+<body>
+<div>
+<input type="button" name="button" value="Home" style="width:100px;height:50px;color : #DB944D;font-size :20px;  background : transparent ;border: #DB944D  ;border-style: solid;
+border-width: 5px;"onclick="location.href='old_city.html';">
+</div>
+
+<div>
+<h1>
+Who We Are :
+</h1>
+</div>
+
+
+<div>
+<p id=F>
+We're a group of MEET students working on making a website for the old city of Jerusalem, where you can enter as a customer, a shopkeeper or a tourist and you can see the shops there and get more information about the place. 
+<br>
+Shopkeepers, you can add your shop, add information about it and the items in it.
+<br>
+Customers and Tourists, you can find shops, in addition the tourists can find hotels, resturants and archetectural sites in the Old City and around it.
+</p>
+</div>
+</body>
+
+</html>
