@@ -11,7 +11,7 @@ Of Jerusalem
 </h1>
 
 <form>
-<input type = "button" value = Tourists>
+<input type = "button" value = Tourists href="Tourists.html">
 <input type = "button" value = Shopkeepers>
 <br>
 <input type = "button" value = Customers>
