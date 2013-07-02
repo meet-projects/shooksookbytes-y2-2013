@@ -41,9 +41,19 @@ def goTocustomers(request):
 	return render(request,'oldCity_app/customers.html')
 
 def goToabout(request):
-	return render(request,'oldCity_app/About.html')
+	return render(request,'oldCity_app/about.html')
 
 def goToshopkeepers(request):
 	return render(request,'oldCity_app/Shopkeepers.html')
 
-
+def goToHotels(request):
+	return render(request,'oldCity_app/Hotels.html')
+	
+def goToArche_Sites(request):
+	return render(request,'oldCity_app/Arche.Sites.html')
+	
+def goToResturants(request):
+	return render(request,'oldCity_app/Resturants.html')
+	
+def goToShops(request):
+	return render(request,'oldCity_app/Shops.html')
