@@ -49,7 +49,7 @@ def goTocustomers(request):
 	return render(request,'oldCity_app/customers.html')
 
 def goToabout(request):
-	return render(request,'oldCity_app/About.html')
+	return render(request,'oldCity_app/about.html')
 
 def goToshopkeepers(request):
 	return render(request,'oldCity_app/Shopkeepers.html')
