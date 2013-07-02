@@ -15,21 +15,29 @@ def addReview(request):
 def displayReviewForm(request):
 	return render(request,'oldCity_app/review.html',{})
 
-def displayShops(request):
-	review_list = Reviews.objects.all()
+def displayShops(request,shop):
+	review_list = Reviews.objects.filter(shop=shop)
 	context = {'reviews':review_list}
+	return render(request , 'oldCity_app/Shops.html',context)
+
+def displayShopsMain(request):
+	context = {'reviews':'noReview'}
 	return render(request , 'oldCity_app/Shops.html',context)
 	
 def review(request):
 	#return render
 	pass
+
+def changeShop(request):
+	shop = request.POST['shop']
+	return displayShops(request,shop)
 	
 def addShop(request):
 	name = request.POST['name']
 	location = request.POST['location']
 	description = request.POST['description']
 	Shop(name=name,location=location,description=description).save()
-	return displayShops(request)
+	return displayShops(request,Shop.objects.filter(name=name))
 
 def goToTourists(request):
 	return render(request,'oldCity_app/Tourists.html')
