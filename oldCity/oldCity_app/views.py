@@ -6,22 +6,26 @@ from models import Reviews,Shop
 def addReview(request):
 	name = request.POST['fullName']
 	review = request.POST['review']
-	shop =  request.POST['shop']
-	shop2 = Shop.objects.filter(name=shop)
-	Reviews(review = review,name=name, shop=shop2[0]).save()
-	return HttpResponse(name + review)
+	print "Here is error"
+	print request.POST['shop']
+	s1 =  Shop.objects.filter(name = request.POST['shop'])[0]
+	
+	Reviews(review = review,name=name, shop=s1).save()
+	return displayShops(request,s1)
     
 
 def displayReviewForm(request):
 	return render(request,'oldCity_app/review.html',{})
 
-def displayShops(request,shop):
-	review_list = Reviews.objects.filter(shop=shop)
-	context = {'reviews':review_list}
+def displayShops(request,shop1):
+	review_list = Reviews.objects.filter(shop=shop1)
+	shop_list = Shop.objects.all()
+	context = {'reviews':review_list, 'shops':shop_list,'pageShop':shop1}
 	return render(request , 'oldCity_app/Shops.html',context)
 
 def displayShopsMain(request):
-	context = {'reviews':'noReview'}
+	shop_list = Shop.objects.all()
+	context = {'reviews':'NoReviews','shops':shop_list,'pageShop':shop_list[0]}
 	return render(request , 'oldCity_app/Shops.html',context)
 	
 def review(request):
@@ -29,15 +33,18 @@ def review(request):
 	pass
 
 def changeShop(request):
-	shop = request.POST['shop']
+	shop = Shop.objects.filter(name=request.POST['shop'])[0]
+	print "------------"
+	print shop.name
 	return displayShops(request,shop)
 	
 def addShop(request):
-	name = request.POST['name']
+	name1 = request.POST['name']
 	location = request.POST['location']
 	description = request.POST['description']
-	Shop(name=name,location=location,description=description).save()
-	return displayShops(request,Shop.objects.filter(name=name))
+	shop = Shop(name=name1,location=location,description=description)
+	shop.save()
+	return displayShops(request,shop)
 
 def goToTourists(request):
 	return render(request,'oldCity_app/Tourists.html')
