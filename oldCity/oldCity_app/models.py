@@ -15,4 +15,14 @@ class Reviews(models.Model):
 	def __unicode__(self):
 		return self.name
 	
+class Forum(models.Model): 
+	question = models.CharField(max_length=1000)
+	name = 	models.CharField(max_length=20)
+	qid = models.AutoField(primary_key=True)
+
+class Comment(models.Model):
+	question = models.ForeignKey('Forum')
+	name = models.CharField(max_length=20)
+	comment = models.CharField(max_length=1000)
+	
 	

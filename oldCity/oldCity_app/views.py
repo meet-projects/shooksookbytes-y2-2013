@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from models import Reviews,Shop
+from models import Reviews,Shop,Forum,Comment
 # Create your views here.
 
 def addReview(request):
@@ -34,9 +34,13 @@ def review(request):
 
 def changeShop(request):
 	shop = Shop.objects.filter(name=request.POST['shop'])[0]
-	print "------------"
-	print shop.name
 	return displayShops(request,shop)
+	
+def addQuestion(request):
+	question = request.POST['question']
+	name = request.POST['fullName']
+	Forum(name = name, question = question).save()
+	return goToForum(request)
 	
 def addShop(request):
 	name1 = request.POST['name']
@@ -45,6 +49,17 @@ def addShop(request):
 	shop = Shop(name=name1,location=location,description=description)
 	shop.save()
 	return displayShops(request,shop)
+
+def addComment(request):
+	name = request.POST['name']
+	comment = request.POST['comment']
+	question = Forum.objects.filter(qid = request.POST['qid'])[0]
+	Comment(name = name,comment=comment, question=question).save()
+	return goToForum(request)
+
+def goToForum(request):
+	context = {'questions':Forum.objects.all(),'comments':Comment.objects.all()}
+	return render(request,'oldCity_app/forum.html',context)
 
 def goToTourists(request):
 	return render(request,'oldCity_app/Tourists.html')

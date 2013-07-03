@@ -21,6 +21,10 @@ urlpatterns = patterns('',
     url(r'^Arche_Sites$',views.goToArche_Sites),
     url(r'^Resturants$',views.goToResturants),
     url(r'^Shops$',views.goToShops),
+    url(r'^displayForum',views.goToForum),
+    url(r'^addQuestion',views.addQuestion),
+    url(r'^addComment',views.addComment),
+    
     # Examples:
     # url(r'^$', 'oldCity.views.home', name='home'),
     # url(r'^oldCity/', include('oldCity.foo.urls')),

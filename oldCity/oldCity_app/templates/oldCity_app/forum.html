@@ -1,0 +1,67 @@
+<html>
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	
+	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		$("#comment").click(function(){
+		$("div#writeComment").show();
+	})
+	$("#showComments").click(function(){
+		$("div#showComments").show();
+	})
+	</script>
+
+	<style type="text/css">
+		div{
+			border:2px solid;
+		}
+		div#writeComment{
+			display:none;
+		}
+		div#showComments{
+			display:none;
+		}
+	</style>
+
+</head>
+<body>
+	<form name="input" action="addQuestion" method="post">
+		{% csrf_token %}
+		Full Name:<input type="text" name="fullName"><br>
+		Question:<input type="text" name="question"><br>
+		<button type="submit" value="submit">Submit</button>
+	</form>
+
+	{% for question in questions %}
+	
+	<div id="question">
+		Name: {{ question.name }}<br>
+		Question: {{ question.question }}<br>
+		-------------------------------------
+		<button type="button" value="comment" id="comment">Comment</button>
+		<button type="button" value="showComments" id="showComments">Show Comments</button>
+		<div id="writeComment">
+			<form name="addComment" action="addComment" method="post">
+				{% csrf_token %}
+				<input type="hidden" value="{{ question.qid }}" name="qid">
+				Name: <input type="text" name="name"><br>
+				Comment: <input type="text" name="comment"><br>
+				<button type="submit" value="submit">Submit</button>
+			</form>
+		</div>
+		<div id="showComments">
+			{% for comment in comments %}
+				{% if comment.question == question %}
+				<div id="comment">
+					Name: {{ comment.name }}<br>
+					Comment: {{ comment.comment }}<br>
+				</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+	
+	{% endfor %}
+</body>
+</html>
