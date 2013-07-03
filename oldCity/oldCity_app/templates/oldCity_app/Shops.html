@@ -1,9 +1,29 @@
 <html>
 
 <head>
+	
 <link rel="stylesheet" type="text/css" href="../static/css/Shops.css">
 
-
+<style type="text/css">
+#addShop
+{
+display: none
+}
+#addReview
+{
+	display: none
+}
+</style>
+<script type="text/javascript">
+function add_shop()
+{
+document.getElementById("addShop").style.display = 'block';
+}
+function add_review()
+{
+document.getElementById("addReview").style.display = 'block';	
+}
+</script>
 </head>
 
 <body>
@@ -14,6 +34,8 @@ border-width: 2px;"onclick="location.href='old_city';">
 
 <div>
 <h1>Shops</h1>
+
+
 </div>
 {{pageShop.name}}
 <div>
@@ -27,24 +49,79 @@ border-width: 2px;"onclick="location.href='old_city';">
 <input type="submit" value="submit">
 </form>
 </div>
+
+
+
 <div id="addShop">
 <form name="input" action="shop" method="post">
 	{% csrf_token %}
 	
-	Name:<input type="text" name="name"><br>
-	Location:<input type="text" name="location"><br>
-	Description:<input type="text" name="description">
+	<table>
+		<tr>
+			<td>
+				Name:
+			</td>
+			<td>
+				<input type="text" name="name">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Location:
+			</td>
+			<td>
+				<input type="text" name="location">
+			</td>
+		</tr>
+	<tr>
+			<td>
+				Description:
+			</td>
+			<td>
+				<input type="text" name="description">
+			</td>
+		</tr>
 
+	</table>
 	<button type="submit" value="submit">Submit</button>
 </form>
 
+
+</div>
+
+
+<form>
+<input type="button" name="button" id="button" value= "add_shop" onclick="javascript:add_shop()" />
+</form>	
 <form name="input" action="review" method="post">
 	{% csrf_token %}
 	<input id="{{ pageShop.name }}" type="hidden" value="{{ pageShop.name }}" name="shop">
-	Full Name:<input type="text" name="fullName"><br>
-	Review:<input type="text" name="review"><br>
 	
+	
+	<div id="addReview">
+	<table>	<tr>
+			<td>
+				Full Name:
+			</td>
+			<td>
+				<input type="text" name="fullName">
+			</td>
+		</tr>
+	<tr>
+			<td>
+				Review:
+			</td>
+			<td>
+				<input type="text" name="review">
+			</td>
+		</tr>
+	</table>
 	<button type="submit" value="submit">Submit</button>
+	</div>
+	<br>
+	<form>
+		<input type="button" name="button" id="button" value= "add review" onclick="javascript:add_review()" />
+	</form>
 </form>
 
 
@@ -56,6 +133,9 @@ border-width: 2px;"onclick="location.href='old_city';">
 		{{ review.shop.name }}<br><br>
 	{% endfor %}
 </div>
+
+
+
 </body>
 
 </html>
