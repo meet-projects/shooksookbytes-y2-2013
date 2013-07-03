@@ -2,6 +2,8 @@
 
 <head>
 <link rel="stylesheet" type="text/css" href="../static/css/Shops.css">
+
+
 </head>
 
 <body>
@@ -13,29 +15,47 @@ border-width: 2px;"onclick="location.href='old_city';">
 <div>
 <h1>Shops</h1>
 </div>
-
+{{pageShop.name}}
 <div>
-<form id="form1" action="changeShop">
+<form id="form1" action="changeShop" method="POST">
 {% csrf_token %}
-<select form="form1">
+<select form="form1" name="shop">
 {% for shop in shops%}
-	<option value="{{ shop.name }}" name="shop"></option>
+	<option value="{{ shop.name }}" name="{{ shop.name }}">{{ shop.name }}</option>
 {% endfor %}
 </select>
-<input type="submit" value="Submit">
+<input type="submit" value="submit">
 </form>
-
+</div>
+<div id="addShop">
 <form name="input" action="shop" method="post">
 	{% csrf_token %}
-
+	
 	Name:<input type="text" name="name"><br>
 	Location:<input type="text" name="location"><br>
 	Description:<input type="text" name="description">
 
 	<button type="submit" value="submit">Submit</button>
-	</form>
-</div>
+</form>
 
+<form name="input" action="review" method="post">
+	{% csrf_token %}
+	<input id="{{ pageShop.name }}" type="hidden" value="{{ pageShop.name }}" name="shop">
+	Full Name:<input type="text" name="fullName"><br>
+	Review:<input type="text" name="review"><br>
+	
+	<button type="submit" value="submit">Submit</button>
+</form>
+
+
+</div>
+<div>
+	{% for review in reviews %}
+		{{ review.name }}<br>
+		{{ review.review }}<br>
+		{{ review.shop.name }}<br><br>
+	{% endfor %}
+</div>
 </body>
 
 </html>
