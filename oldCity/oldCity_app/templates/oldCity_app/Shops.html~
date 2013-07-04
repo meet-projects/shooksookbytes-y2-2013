@@ -3,7 +3,7 @@
 <head>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-<script type="text/javascript"src="{{STATIC_URL}}js/shop.js">
+<script type="text/javascript"src="{{STATIC_URL}}js/shops.js">
 </script>	
 <link rel="stylesheet" type="text/css" href="../static/css/Shops.css">
 <style type="text/css">
@@ -20,7 +20,7 @@ display: none
 <script type="text/javascript">
 function add_shop()
 {
-document.getElementById("addShop").style.display = 'block';
+document.getElementById("addShop").style.display = 'block'sdfsd;
 }
 function add_review()
 {
@@ -30,18 +30,21 @@ document.getElementById("addReview").style.display = 'block';
 </head>
 
 <body>
+
 <div>
 	<input type="button" name="button" value="Home" style="width:100px;height:50px;color : #DB944D;font-size :20px;  background : transparent ;border: #DB944D  ;border-style: solid;
 border-width: 2px;"onclick="location.href='old_city';">
 </div>	
+
 
 <div>
 <h1>Shops</h1>
 
 
 </div>
-{{pageShop.name}}
-<div>
+
+<div id = "choose_shop">
+	{{pageShop.name}}
 <form id="form1" action="changeShop" method="POST">
 {% csrf_token %}
 <select form="form1" name="shop">
@@ -49,7 +52,7 @@ border-width: 2px;"onclick="location.href='old_city';">
 	<option value="{{ shop.name }}" name="{{ shop.name }}">{{ shop.name }}</option>
 {% endfor %}
 </select>
-<input type="submit" value="submit">
+	<button type="submit" value="submit"<a href ="#" class="button orange"></a>submit</button>
 </form>
 </div>
 
@@ -65,7 +68,7 @@ border-width: 2px;"onclick="location.href='old_city';">
 				Name:
 			</td>
 			<td>
-				<input type="text" name="name">
+				<input type="text" name="name"style="color : #ffffff;font-size :20px; background:  #DB944D;border: none ;">
 			</td>
 		</tr>
 		<tr>
@@ -73,7 +76,7 @@ border-width: 2px;"onclick="location.href='old_city';">
 				Location:
 			</td>
 			<td>
-				<input type="text" name="location">
+				<input type="text" name="location"style="color : #ffffff;font-size :20px; background:  #DB944D;border: none ;">
 			</td>
 		</tr>
 	<tr>
@@ -81,12 +84,13 @@ border-width: 2px;"onclick="location.href='old_city';">
 				Description:
 			</td>
 			<td>
-				<input type="text" name="description">
+				<input type="text" name="description"style="color : #ffffff;font-size :20px; background:  #DB944D;border: none ;">
 			</td>
 		</tr>
 
 	</table>
-	<button type="submit" value="submit">Submit</button>
+	<button type="submit" value="submit"<a href ="#" class="button orange"></a>submit</button>
+	
 </form>
 
 
@@ -94,8 +98,11 @@ border-width: 2px;"onclick="location.href='old_city';">
 
 
 <form>
-<input type="button" name="button" id="button" value= "add_shop" onclick="javascript:add_shop()" />
+		<a href ="#" class="button orange" onclick="javascript:add_shop()">add shop</a>
+		
+
 </form>	
+
 <form name="input" action="review" method="post">
 	{% csrf_token %}
 	<input id="{{ pageShop.name }}" type="hidden" value="{{ pageShop.name }}" name="shop">
@@ -107,7 +114,7 @@ border-width: 2px;"onclick="location.href='old_city';">
 				Full Name:
 			</td>
 			<td>
-				<input type="text" name="fullName">
+				<input type="text" name="fullName"style="color : #ffffff;font-size :20px; background:  #DB944D;border: none ;">
 			</td>
 		</tr>
 	<tr>
@@ -115,16 +122,18 @@ border-width: 2px;"onclick="location.href='old_city';">
 				Review:
 			</td>
 			<td>
-				<input type="text" name="review">
+				<input type="text" name="review"style="color : #ffffff;font-size :20px; background:  #DB944D;border: none ;">
 			</td>
 		</tr>
 	</table>
-	<button type="submit" value="submit">Submit</button>
+		<button type="submit" value="submit"<a href ="#" class="button orange"></a>submit</button>
 	</div>
 	<br>
 	<form>
-		<input type="button" name="button" id="button" value= "add review" onclick="javascript:add_review()" />
+		<a href ="#" class="button orange" onclick="javascript:add_review()">add review</a>
+		
 	</form>
+	
 </form>
 
 
