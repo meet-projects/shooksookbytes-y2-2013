@@ -57,6 +57,11 @@ border-width: 2px;"onclick="location.href='old_city';">
 </div>
 
 
+<form>
+		<a href ="#" class="button orange" onclick="javascript:add_shop()">add shop</a>
+		
+
+</form>	
 
 <div id="addShop">
 <form name="input" action="shop" method="post">
@@ -87,9 +92,10 @@ border-width: 2px;"onclick="location.href='old_city';">
 				<input type="text" name="description"style="color : #ffffff;font-size :20px; background:  #DB944D;border: none ;">
 			</td>
 		</tr>
-
+		
+	
 	</table>
-	<button type="submit" value="submit"<a href ="#" class="button orange"></a>submit</button>
+	<button type="submit" value="submit" href ="#" class="button orange">submit</button>
 	
 </form>
 
@@ -97,16 +103,15 @@ border-width: 2px;"onclick="location.href='old_city';">
 </div>
 
 
-<form>
-		<a href ="#" class="button orange" onclick="javascript:add_shop()">add shop</a>
-		
-
-</form>	
 
 <form name="input" action="review" method="post">
 	{% csrf_token %}
 	<input id="{{ pageShop.name }}" type="hidden" value="{{ pageShop.name }}" name="shop">
 	
+	<form>
+		<a href ="#" class="button orange" onclick="javascript:add_review()">add review</a>
+		
+	</form>
 	
 	<div id="addReview">
 	<table id="t2">	<tr>
@@ -126,15 +131,13 @@ border-width: 2px;"onclick="location.href='old_city';">
 			</td>
 		</tr>
 	</table>
-		<button type="submit" value="submit"<a href ="#" class="button orange"></a>submit</button>
+		<button type="submit" value="submit" href ="#" class="button orange">submit</button>
+		</form>
 	</div>
 	<br>
-	<form>
-		<a href ="#" class="button orange" onclick="javascript:add_review()">add review</a>
-		
-	</form>
 	
-</form>
+
+<div id="remove">
 <form name="rr" action="removeReview" method="post">
 {% csrf_token %}
 <input id="{{ pageShop.name }}" type="hidden" value="{{ pageShop.name }}" name="shop">
@@ -143,9 +146,9 @@ border-width: 2px;"onclick="location.href='old_city';">
 	<option id="{{shop.name}}" value="{{ shop.name }}" name="{{ shop.name }}">{{ shop.name }}</option>
 {% endfor %}
 </select>
-<button type="submit" value="submit">submit</button>
+<button type="submit" value="submit"<a href ="#" class="button orange"></a>delete</button>
 </form>
-
+</div>
 
 </div>
 <div>
