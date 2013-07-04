@@ -3,7 +3,7 @@
 <head>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-<script type="text/javascript"src="{{STATIC_URL}}js/shops.js">
+<script type="text/javascript"src="{{STATIC_URL}}js/shop.js">
 </script>	
 <link rel="stylesheet" type="text/css" href="../static/css/Shops.css">
 <style type="text/css">
@@ -30,29 +30,26 @@ document.getElementById("addReview").style.display = 'block';
 </head>
 
 <body>
-
 <div>
 	<input type="button" name="button" value="Home" style="width:100px;height:50px;color : #DB944D;font-size :20px;  background : transparent ;border: #DB944D  ;border-style: solid;
 border-width: 2px;"onclick="location.href='old_city';">
 </div>	
-
 
 <div>
 <h1>Shops</h1>
 
 
 </div>
-
-<div id = "choose_shop">
-	{{pageShop.name}}
+{{pageShop.name}}
+<div>
 <form id="form1" action="changeShop" method="POST">
 {% csrf_token %}
-<select id="SELECT" form="form1" name="shop">
+<select form="form1" name="shop">
 {% for shop in shops%}
 	<option value="{{ shop.name }}" name="{{ shop.name }}">{{ shop.name }}</option>
 {% endfor %}
 </select>
-	<button type="submit" value="submit"<a href ="#" class="button orange"></a>submit</button>
+<input type="submit" value="submit">
 </form>
 </div>
 
@@ -62,9 +59,9 @@ border-width: 2px;"onclick="location.href='old_city';">
 <form name="input" action="shop" method="post">
 	{% csrf_token %}
 	
-	<table id ="t1">
+	<table>
 		<tr>
-			<td >
+			<td>
 				Name:
 			</td>
 			<td>
@@ -89,8 +86,7 @@ border-width: 2px;"onclick="location.href='old_city';">
 		</tr>
 
 	</table>
-	<button type="submit" value="submit"<a href ="#" class="button orange"></a>submit</button>
-	
+	<button type="submit" value="submit">Submit</button>
 </form>
 
 
@@ -98,18 +94,15 @@ border-width: 2px;"onclick="location.href='old_city';">
 
 
 <form>
-		<a href ="#" class="button orange" onclick="javascript:add_shop()">add shop</a>
-		
-
+<input type="button" name="button" id="button" value= "add_shop" onclick="javascript:add_shop()" />
 </form>	
-
 <form name="input" action="review" method="post">
 	{% csrf_token %}
 	<input id="{{ pageShop.name }}" type="hidden" value="{{ pageShop.name }}" name="shop">
 	
 	
 	<div id="addReview">
-	<table id="t2">	<tr>
+	<table>	<tr>
 			<td>
 				Full Name:
 			</td>
@@ -126,14 +119,12 @@ border-width: 2px;"onclick="location.href='old_city';">
 			</td>
 		</tr>
 	</table>
-		<button type="submit" value="submit"<a href ="#" class="button orange"></a>submit</button>
+	<button type="submit" value="submit">Submit</button>
 	</div>
 	<br>
 	<form>
-		<a href ="#" class="button orange" onclick="javascript:add_review()">add review</a>
-		
+		<input type="button" name="button" id="button" value= "add review" onclick="javascript:add_review()" />
 	</form>
-	
 </form>
 
 
