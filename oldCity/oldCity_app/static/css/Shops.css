@@ -2,7 +2,8 @@ h1 {color : #DB944D; font-size :100px;font-weight : bold;text-shadow ;text-align
 text-shadow: 5px 5px 5px #FFCC66;}
 
 #choose_shop {color:orange;font size : 20px;text-align:center;}
-
+#t1{color:orange;}
+#t2{color:orange;}
 html{
 	background:url(http://www.hdwallpapersplus.com/wp-content/uploads/2013/02/Wallpapers-room_com___appleMAGIC_WP_Brown_by_neodesktop_1920x1200.jpg) no-repeat center center fixed;
 -webkit-background-size:cover;
@@ -10,6 +11,19 @@ html{
 -o-background-size:cover;
  background-size:cover;
 }
+
+SELECT {
+FONT-WEIGHT: bold;
+FONT-SIZE: 13px;
+COLOR: #ea9b36;
+FONT-FAMILY: Tahoma,Arial;
+BACKGROUND-COLOR: #7d582b;
+BORDER: 1;
+BORDER-STYLE: solid;
+BORDER-COLOR: #5B0100;
+SCROLLBAR-BASE-COLOR: #5a785a;
+SCROLLBAR-ARROW-COLOR: #ffffff;
+} 
 .button {
 	display: inline-block;
 	outline: none;
