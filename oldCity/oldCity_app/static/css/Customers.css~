@@ -1,0 +1,56 @@
+h1 {color : #DB944D; font-size :100px;font-weight : bold;text-shadow ;text-align:center;
+text-shadow: 5px 5px 5px #FFCC66;}
+body {text-align:center; }
+
+ #z{
+        -moz-box-shadow:inset 0px 1px 0px 0px #efdcfb;
+        -webkit-box-shadow:inset 0px 1px 0px 0px #efdcfb;
+        box-shadow:inset 0px 1px 0px 0px #efdcfb;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, black), color-stop(1, #DB944D));
+        background:-moz-linear-gradient(top, black 5%, #DB944D 100%);
+        background:-webkit-linear-gradient(top, black 5%, #DB944D 100%);
+        background:-o-linear-gradient(top, black 5%, #DB944D 100%);
+        background:-ms-linear-gradient(top, black 5%, #DB944D 100%);
+        background:linear-gradient(to bottom, black 5%, #DB944D 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#DB944D',GradientType=0);
+        
+        background-color:#000000;
+        
+        -moz-border-radius:6px;
+        -webkit-border-radius:6px;
+        border-radius:6px;
+        
+        border:5px solid #DB944D;
+        display:inline-block;
+        color:black;
+        font-family:arial;
+        font-size:20px;
+        font-weight:bold;
+        padding:20px 20px;
+        text-decoration:none;
+        
+    }
+    #z:hover {
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #DB944D), color-stop(1, black));
+        background:-moz-linear-gradient(top, #DB944D 5%, black 100%);
+        background:-webkit-linear-gradient(top, #DB944D 5%, black 100%);
+        background:-o-linear-gradient(top, #DB944D 5%, black 100%);
+        background:-ms-linear-gradient(top, #DB944D 5%, black 100%);
+        background:linear-gradient(to bottom, #DB944D 5%, black 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#DB944D', endColorstr='black',GradientType=0);
+        
+        background-color:#000000;
+    }
+    #z:active {
+        position:relative;
+        top:1px;
+    }
+
+html { 
+  background: url(http://www.hdwallpapersplus.com/wp-content/uploads/2013/02/Wallpapers-room_com___appleMAGIC_WP_Brown_by_neodesktop_1920x1200.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+

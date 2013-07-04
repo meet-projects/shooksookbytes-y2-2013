@@ -2,6 +2,11 @@
 
 <head>
 <link rel="stylesheet" type = "text/css" href = "../static/css/About.css">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript"src="{{STATIC_URL}}js/about.js">
+</script>
 </head>
 
 <body>
@@ -20,8 +25,6 @@ Who We Are :
 <div>
 <p id=F>
 We're a group of MEET students working on making a website for the old city of Jerusalem, where you can enter as a customer, a shopkeeper or a tourist and you can see the shops there and get more information about the place. 
-<br>
-Shopkeepers, you can add your shop, add information about it and the items in it.
 <br>
 Customers and Tourists, you can find shops, in addition the tourists can find hotels, resturants and archetectural sites in the Old City and around it.
 </p>

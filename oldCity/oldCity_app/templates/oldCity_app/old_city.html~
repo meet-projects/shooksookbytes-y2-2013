@@ -5,15 +5,6 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 <script type="text/javascript" src= "{{STATIC_URL}}js/home.js">
-$(document).ready(function(){
-  $("button").click(function(){
-    $("#div2").fadeIn();
-    $("#div3").fadeIn("slow");
-    $("#div4").fadeIn(3000);
-  });
-});
-
-});
 </script>
 </head>
 
@@ -23,38 +14,24 @@ $(document).ready(function(){
 The Old City <br>
 Of Jerusalem
 </h1>
-<div id=F>
-<input type="button" name="button" value="click" style="width:200px;height:100px;color : #DB944D;font-size :50px;  background: black;border: none;text-shadow ;text-shadow: 5px 5px 5px black;border: orange ;border-style: solid;
-border-width: 5px;">
-</div>
+
+<form class=HB>
+
+
+<input id=D type="button" name="button" value="About" onclick="location.href='About';">
 
 <br>
-
-<form id=HB>
-
-<div id=D>
-<input type="button" name="button" value="About" style="width:200px;height:100px;color : #DB944D;font-size :50px;  background: black;border: none;text-shadow ;text-shadow: 5px 5px 5px black;border: orange ;border-style: solid;
-border-width: 5px;"onclick="location.href='About';">
-</div>
-
+<br>
 <br>
 
 <div id=A>
-<input type="button" name="A" value="Tourists" style="width:250px;height:100px;color : #DB944D;font-size :50px; background: black;border: none  ;text-shadow ;text-shadow: 5px 5px 5px black;border: orange ;border-style: solid;
-border-width: 5px;" onclick="location.href='Tourists';">
+<input type="button" name="A" value="Tourists" onclick="location.href='Tourists';">
 </div>
 
 <br>
 
 <div id=B>
-<input type="button" name="B" value="Customers" style="width:300px;height:100px;color : #DB944D;font-size :50px; background: black;border: none ;text-shadow ;text-shadow: 5px 5px 5px black;border: orange ;border-style: solid;
-border-width: 5px;"onclick="location.href='customers';">
-</div>
-
-<br>
-<div id=C>
-<input type="button" name="C" value="Shopkeepers" style="width:360px;height:100px;color : #DB944D;font-size :50px; background: black;border: none ;text-shadow ;text-shadow: 5px 5px 5px black;border: orange ;border-style: solid;
-border-width: 5px;"onclick="location.href='Shopkeepers';">
+<input type="button" name="B" value="Customers" onclick="location.href='customers';">
 </div>
 
 

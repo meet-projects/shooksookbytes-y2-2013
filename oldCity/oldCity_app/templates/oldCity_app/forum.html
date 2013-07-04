@@ -34,6 +34,10 @@ display:none;
 
 </head>
 <body>
+<div>
+<input id=q type="button" name="button" value="Home" onclick="location.href='old_city';">
+</div>
+
 <form name="input" action="addQuestion" method="post">
 {% csrf_token %}
 Full Name:<input type="text" name="fullName" style="color : #ffffff;font-size :20px; background:  #DB944D;border: none ;"><br>
