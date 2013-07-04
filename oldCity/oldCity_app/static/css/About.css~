@@ -1,5 +1,5 @@
 h1 {color : #DB944D; font-size :100px;font-weight : bold;text-shadow ;text-align:center;
-text-shadow: 5px 5px 5px #FFCC66;}
+text-shadow: 5px 5px 5px #000000;}
 #F {color : #DB944D; font-size :40px;font-weight : bold;text-align:center;}
 body {text-align:left; }
 
@@ -28,7 +28,7 @@ body {text-align:left; }
         font-family:arial;
         font-size:20px;
         font-weight:bold;
-        padding:25px 25px;
+        padding:20px 20px;
         text-decoration:none;
         
     }
@@ -50,7 +50,7 @@ body {text-align:left; }
 
 
 html { 
-  background: url(http://www.hdwallpapersplus.com/wp-content/uploads/2013/02/Wallpapers-room_com___appleMAGIC_WP_Brown_by_neodesktop_1920x1200.jpg) no-repeat center center fixed; 
+  background: url(http://images2.layoutsparks.com/1/181845/fairy-collage-brown-image.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

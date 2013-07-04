@@ -116,8 +116,9 @@ text-shadow: 5px 5px 5px black;}
         
         -moz-border-radius:6px;
         -webkit-border-radius:6px;
-
+        border-radius:6px;
         
+        border:5px solid #DB944D;
         display:inline-block;
         color:black;
         font-family:arial;

@@ -1,8 +1,8 @@
 
 h1 {color : #DB944D; font-size :100px;font-weight : bold;text-shadow ;text-align:center;
-text-shadow: 5px 5px 5px #FFCC66;}
+text-shadow: 5px 5px 5px #000000;}
 table {color : #462B0F;margin-left:480px;margin-top:50;}
-tr {padding:5px;text-align:center; }
+tr {padding:10px;text-align:center; }
 body {text-align:center; }
 
   #z{
