@@ -78,9 +78,6 @@ def goTocustomers(request):
 def goToabout(request):
 	return render(request,'oldCity_app/about.html')
 
-def goToshopkeepers(request):
-	return render(request,'oldCity_app/Shopkeepers.html')
-
 def goToHotels(request):
 	return render(request,'oldCity_app/Hotels.html')
 	

@@ -1,79 +1,75 @@
 <html>
 <head>
-<link rel="stylesheet" type = "text/css" href = "{{STATIC_URL}}css/forum.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>	
-	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-	<script type="text/javascript"src="{{STATIC_URL}}js/forum.js">
-		
-		$(document).ready(function() {
-		function ToggleShowComments() {
-			//$('.showComments').toggle();
-			$(this).parent().children('.showComments').toggle();
-		}
-		
-		function ToggleAddComments() {
-			$(this).parent().children('.writeComment').toggle();
-		}
-		
-		$('.commentB').click(ToggleAddComments);
-		$('.showCommentsB').click(ToggleShowComments);
-	});
-	</script>
+		<link rel="stylesheet" type = "text/css" href = "{{STATIC_URL}}css/Forum.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>	
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script type="text/javascript">
 
-	<style type="text/css">
-		div{
-			border:2px solid;
-		}
-		div.writeComment{
-			display:none;
-		}
-		div.showComments{
-			display:none;
-		}
-	</style>
+$(document).ready(function() {
+function ToggleShowComments() {
+//$('.showComments').toggle();
+$(this).parent().children('.showComments').toggle();
+}
+
+function ToggleAddComments() {
+$(this).parent().children('.writeComment').toggle();
+}
+
+$('.commentB').click(ToggleAddComments);
+$('.showCommentsB').click(ToggleShowComments);
+});
+</script>
+
+<style type="text/css">
+div{
+border:2px solid;
+}
+div.writeComment{
+display:none;
+}
+div.showComments{
+display:none;
+}
+</style>
 
 </head>
 <body>
-	<form name="input" action="addQuestion" method="post">
-		{% csrf_token %}
-		Full Name:  <input type="text" name="fullName"style="color : #ffffff;font-size :20px; background:  #DB944D;border: none ;">
+<form name="input" action="addQuestion" method="post">
+{% csrf_token %}
+Full Name:<input type="text" name="fullName" style="color : #ffffff;font-size :20px; background:  #DB944D;border: none ;"><br>
 <br>
-<br>
-		Question:  <input type="text" name="question"style="color : #ffffff;font-size :20px; background: #DB944D ;border: none ;">
-<br>
-<br>
-		<button type="submit" value="submit"style="width:250px;height:50px;color : #DB944D;font-size :20px; background: transparent;border: white ;border-style: solid;border-width: 2px;";">Submit</button>
-	</form>
+Question:<input type="text" name="question" style="color : #ffffff;font-size :20px; background: #DB944D ;border: none ;"><br><br>
+<button type="submit" value="submit" style="width:250px;height:50px;color : #DB944D;font-size :20px; background: transparent;border: white ;border-style: solid;border-width: 2px;">Submit</button>
+</form>
 
-	{% for question in questions %}
-	
-	<div class="question">
-		Name: {{ question.name }}<br>
-		Question: {{ question.question }}<br>
+{% for question in questions %}
 
-		<button type="button" value="commentB" class="commentB"style="width:250px;height:50px;color : #DB944D;font-size :20px; background: transparent;border: none ;">Comment</button>
-		<button type="button" value="showCommentsB" class="showCommentsB"style="width:250px;height:50px;color : #DB944D;font-size :20px; background: transparent;border: none ;">Show Comments</button>
-		<div class="writeComment">
-			<form name="addComment" action="addComment" method="post">
-				{% csrf_token %}
-				<input type="hidden" value="{{ question.qid }}" name="qid">
-				Name: <input type="text" name="name"><br>
-				Comment: <input type="text" name="comment"><br>
-				<button type="submit" value="submit">Submit</button>
-			</form>
-		</div>
-		<div class="showComments">
-			{% for comment in comments %}
-				{% if comment.question == question %}
-				<div>
-					Name: {{ comment.name }}<br>
-					Comment: {{ comment.comment }}<br>
-				</div>
-				{% endif %}
-			{% endfor %}
-		</div>
-	</div>
-	
-	{% endfor %}
+<div class="question">
+Name: {{ question.name }}<br>
+Question: {{ question.question }}<br>
+<button type="button" value="commentB" class="commentB" style="width:250px;height:50px;color : #DB944D;font-size :20px; background: transparent;border: none ;">Comment</button>
+<button type="button" value="showCommentsB" class="showCommentsB" style="width:250px;height:50px;color : #DB944D;font-size :20px; background: transparent;border: none ;">Show Comments</button>
+<div class="writeComment">
+<form name="addComment" action="addComment" method="post">
+{% csrf_token %}
+<input type="hidden" value="{{ question.qid }}" name="qid">
+Name: <input type="text" name="name"><br>
+Comment: <input type="text" name="comment"><br>
+<button type="submit" value="submit">Submit</button>
+</form>
+</div>
+<div class="showComments">
+{% for comment in comments %}
+{% if comment.question == question %}
+<div>
+Name: {{ comment.name }}<br>
+Comment: {{ comment.comment }}<br>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+</div>
+
+{% endfor %}
 </body>
 </html>
