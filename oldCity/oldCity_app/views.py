@@ -25,7 +25,8 @@ def displayShops(request,shop1):
 
 def displayShopsMain(request):
 	shop_list = Shop.objects.all()
-	context = {'reviews':'NoReviews','shops':shop_list,'pageShop':shop_list[0]}
+	reviews = Reviews.objects.filter(shop = shop_list[0])
+	context = {'reviews':reviews,'shops':shop_list,'pageShop':shop_list[0]}
 	return render(request , 'oldCity_app/Shops.html',context)
 	
 def review(request):
