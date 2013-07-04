@@ -132,6 +132,16 @@ border-width: 2px;"onclick="location.href='old_city';">
 	</form>
 	
 </form>
+<form name="rr" action="removeReview" method="post">
+{% csrf_token %}
+<input id="{{ pageShop.name }}" type="hidden" value="{{ pageShop.name }}" name="shop">
+<select id="review" name="review">
+{% for shop in shops%}
+	<option id="{{shop.name}}" value="{{ shop.name }}" name="{{ shop.name }}">{{ shop.name }}</option>
+{% endfor %}
+</select>
+<button type="submit" value="submit">submit</button>
+</form>
 
 
 </div>

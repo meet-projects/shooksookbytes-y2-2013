@@ -24,6 +24,7 @@ urlpatterns = patterns('',
     url(r'^displayForum',views.goToForum),
     url(r'^addQuestion',views.addQuestion),
     url(r'^addComment',views.addComment),
+    url(r'^removeReview',views.removeReview),
     
     # Examples:
     # url(r'^$', 'oldCity.views.home', name='home'),

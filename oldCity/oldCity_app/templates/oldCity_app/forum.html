@@ -1,5 +1,6 @@
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="../templates/oldCity_app/Forum.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>	
 	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 	<script type="text/javascript">
@@ -46,8 +47,8 @@
 		Name: {{ question.name }}<br>
 		Question: {{ question.question }}<br>
 		-------------------------------------
-		<button type="button" value="commentB" class="commentB">Comment</button>
-		<button type="button" value="showCommentsB" class="showCommentsB">Show Comments</button>
+		<button type="button" class="button" value="commentB" class="commentB">Comment</button>
+		<button type="button" class="button" value="showCommentsB" class="showCommentsB">Show Comments</button>
 		<div class="writeComment">
 			<form name="addComment" action="addComment" method="post">
 				{% csrf_token %}

@@ -32,6 +32,11 @@ def review(request):
 	#return render
 	pass
 
+def removeReview(request):
+	Shop.objects.filter(name=request.POST['review'])[0].delete()
+	shop1 = Shop.objects.filter(name = request.POST['shop'])
+	return displayShops(request,shop1)
+
 def changeShop(request):
 	shop = Shop.objects.filter(name=request.POST['shop'])[0]
 	return displayShops(request,shop)
