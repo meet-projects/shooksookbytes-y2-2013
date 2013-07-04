@@ -1,13 +1,13 @@
 h1 {color : #DB944D; font-size :100px;font-weight : bold;text-shadow ;text-align:center;
 text-shadow: 5px 5px 5px #FFCC66;}
-
+#remove{color:orange;font size : 20px;text-align:center;}
 #choose_shop {color:orange;font size : 20px;text-align:center;}
-<<<<<<< HEAD
+/*<<<<<<< HEAD*/
 body {color : #ffffff; font-size :20px;font-weight:bold;}
-=======
+/*=======*/
 #t1{color:orange;}
 #t2{color:orange;}
->>>>>>> b9686115b6d6d97bea64b19026ee096d15de97a0
+/* >>>>>>> b9686115b6d6d97bea64b19026ee096d15de97a0 */
 html{
 	background:url(http://www.hdwallpapersplus.com/wp-content/uploads/2013/02/Wallpapers-room_com___appleMAGIC_WP_Brown_by_neodesktop_1920x1200.jpg) no-repeat center center fixed;
 -webkit-background-size:cover;
