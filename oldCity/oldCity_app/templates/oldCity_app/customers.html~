@@ -1,38 +1,35 @@
 <html>
+
 <head>
-<link rel="stylesheet" type = "text/css" href = "../static/css/Tourists.css">
+<link rel="stylesheet" type = "text/css" href = "../static/css/Customers.css">
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-<script type="text/javascript"src="{{STATIC_URL}}js/Tourists.js">
+<script type="text/javascript">
 </script>
 </head>
+
 <body>
 
-<h1> Welcome Tourists </h1>
+<h1>
+Customers
 
-<span>
-<table>
-<tr> 
+</h1>
+
+<div>
+<form>
 <input type="button" name="button" value="Home" style="width:200px;height:50px;color : #DB944D;font-size :20px; background: transparent;border: none  ;" onclick="location.href='old_city';">
 
 <input type="button" name="button" value="Shops" style="width:200px;height:50px;color : #DB944D;font-size :20px; background: transparent;border: none ;"onclick="location.href='Shops';">
 
-<input type="button" name="button" value="Archetectural Sites" style="width:250px;height:50px;color : #DB944D;font-size :20px; background: transparent;border: none ;"onclick="location.href='Arche_Sites';">
-
-<input type="button" name="button" value="Hotels" style="width:200px;height:50px;color : #DB944D;font-size :20px;  background: transparent;border: none;"onclick="location.href='Hotels';">
-
-<input type="button" name="button" value="Resturants" style="width:200px;height:50px;color : #DB944D; font-size :20px; background: transparent;border: none;"onclick="location.href='Resturants';">
-
-
-
-</tr>
-</table>
-</span>
+<input type="button" name="button" value="Forum" style="width:250px;height:50px;color : #DB944D;font-size :20px; background: transparent;border: none ;">
+		
+</form>
+</div>
 
 <div>
 	<iframe width="900" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Old+City,+Jerusalem&amp;aq=0&amp;oq=old+city&amp;sll=37.0625,-95.677068&amp;sspn=55.674612,134.208984&amp;ie=UTF8&amp;hq=&amp;hnear=The+Old+City,+Jerusalem&amp;ll=31.777574,35.232487&amp;spn=0.014775,0.032766&amp;t=m&amp;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Old+City,+Jerusalem&amp;aq=0&amp;oq=old+city&amp;sll=37.0625,-95.677068&amp;sspn=55.674612,134.208984&amp;ie=UTF8&amp;hq=&amp;hnear=The+Old+City,+Jerusalem&amp;ll=31.777574,35.232487&amp;spn=0.014775,0.032766&amp;t=m&amp;z=14" style="color:#0000FF;text-align:left">View Larger Map</a></small>
 </div>
 
-
 </body>
+
 </html>
