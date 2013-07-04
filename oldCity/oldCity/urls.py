@@ -19,11 +19,12 @@ urlpatterns = patterns('',
     url(r'^Hotels$',views.goToHotels),
     url(r'^Arche_Sites$',views.goToArche_Sites),
     url(r'^Resturants$',views.goToResturants),
-    url(r'^Shops$',views.goToShops),
+    url(r'^Shops$',views.displayShopsMain),
     url(r'^displayForum',views.goToForum),
     url(r'^addQuestion',views.addQuestion),
     url(r'^addComment',views.addComment),
     url(r'^removeReview',views.removeReview),
+    url(r'^ads',views.ads),
     
     # Examples:
     # url(r'^$', 'oldCity.views.home', name='home'),
