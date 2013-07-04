@@ -20,7 +20,7 @@ display: none
 <script type="text/javascript">
 function add_shop()
 {
-document.getElementById("addShop").style.display = 'block';
+document.getElementById("addShop").style.display = 'block'sdfsd;
 }
 function add_review()
 {
@@ -47,7 +47,7 @@ border-width: 2px;"onclick="location.href='old_city';">
 	{{pageShop.name}}
 <form id="form1" action="changeShop" method="POST">
 {% csrf_token %}
-<select id="SELECT" form="form1" name="shop">
+<select form="form1" name="shop">
 {% for shop in shops%}
 	<option value="{{ shop.name }}" name="{{ shop.name }}">{{ shop.name }}</option>
 {% endfor %}
@@ -62,9 +62,9 @@ border-width: 2px;"onclick="location.href='old_city';">
 <form name="input" action="shop" method="post">
 	{% csrf_token %}
 	
-	<table id ="t1">
+	<table>
 		<tr>
-			<td >
+			<td>
 				Name:
 			</td>
 			<td>
@@ -109,7 +109,7 @@ border-width: 2px;"onclick="location.href='old_city';">
 	
 	
 	<div id="addReview">
-	<table id="t2">	<tr>
+	<table>	<tr>
 			<td>
 				Full Name:
 			</td>
@@ -134,16 +134,6 @@ border-width: 2px;"onclick="location.href='old_city';">
 		
 	</form>
 	
-</form>
-<form name="rr" action="removeReview" method="post">
-{% csrf_token %}
-<input id="{{ pageShop.name }}" type="hidden" value="{{ pageShop.name }}" name="shop">
-<select id="review" name="review">
-{% for shop in shops%}
-	<option id="{{shop.name}}" value="{{ shop.name }}" name="{{ shop.name }}">{{ shop.name }}</option>
-{% endfor %}
-</select>
-<button type="submit" value="submit">submit</button>
 </form>
 
 
