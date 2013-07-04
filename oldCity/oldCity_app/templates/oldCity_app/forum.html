@@ -1,25 +1,32 @@
 <html>
 <head>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>	
 	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 	<script type="text/javascript">
-		$("#comment").click(function(){
-		$("div#writeComment").show();
-	})
-	$("#showComments").click(function(){
-		$("div#showComments").show();
-	})
+		
+		$(document).ready(function() {
+		function ToggleShowComments() {
+			//$('.showComments').toggle();
+			$(this).parent().children('.showComments').toggle();
+		}
+		
+		function ToggleAddComments() {
+			$(this).parent().children('.writeComment').toggle();
+		}
+		
+		$('.commentB').click(ToggleAddComments);
+		$('.showCommentsB').click(ToggleShowComments);
+	});
 	</script>
 
 	<style type="text/css">
 		div{
 			border:2px solid;
 		}
-		div#writeComment{
+		div.writeComment{
 			display:none;
 		}
-		div#showComments{
+		div.showComments{
 			display:none;
 		}
 	</style>
@@ -35,13 +42,13 @@
 
 	{% for question in questions %}
 	
-	<div id="question">
+	<div class="question">
 		Name: {{ question.name }}<br>
 		Question: {{ question.question }}<br>
 		-------------------------------------
-		<button type="button" value="comment" id="comment">Comment</button>
-		<button type="button" value="showComments" id="showComments">Show Comments</button>
-		<div id="writeComment">
+		<button type="button" value="commentB" class="commentB">Comment</button>
+		<button type="button" value="showCommentsB" class="showCommentsB">Show Comments</button>
+		<div class="writeComment">
 			<form name="addComment" action="addComment" method="post">
 				{% csrf_token %}
 				<input type="hidden" value="{{ question.qid }}" name="qid">
@@ -50,10 +57,10 @@
 				<button type="submit" value="submit">Submit</button>
 			</form>
 		</div>
-		<div id="showComments">
+		<div class="showComments">
 			{% for comment in comments %}
 				{% if comment.question == question %}
-				<div id="comment">
+				<div>
 					Name: {{ comment.name }}<br>
 					Comment: {{ comment.comment }}<br>
 				</div>
