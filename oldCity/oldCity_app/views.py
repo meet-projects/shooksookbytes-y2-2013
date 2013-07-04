@@ -62,6 +62,13 @@ def addComment(request):
 	Comment(name = name,comment=comment, question=question).save()
 	return goToForum(request)
 
+def ads(request):
+	shops = [['Zahdeh', 'Soo2 il lahmeh','sells meat and fish'],['Abo Shukri','Pain road','Falafel and Humus Resturaunt'],['Salon Fadi Barbers Shop','Armanien quarter','Barber Shop'],['Abo ahmed','Pain road','sells fruit and vegtables']]
+
+	for shop in shops:
+		Shop(name = shop[0],location = shop[1],description = shop[2]).save()
+	return HttpResponse("add those shops")
+
 def goToForum(request):
 	context = {'questions':Forum.objects.all(),'comments':Comment.objects.all()}
 	return render(request,'oldCity_app/forum.html',context)
