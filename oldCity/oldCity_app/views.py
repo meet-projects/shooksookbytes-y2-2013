@@ -10,7 +10,7 @@ def addReview(request):
 	print request.POST['shop']
 	s1 =  Shop.objects.filter(name = request.POST['shop'])[0]
 	
-	Reviews(review = review,name=name, shop=s1).save()
+	Reviews(review =review,name=name, shop=s1).save()
 	return displayShops(request,s1)
     
 
