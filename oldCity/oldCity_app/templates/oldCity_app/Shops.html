@@ -107,12 +107,9 @@ border-width: 2px;"onclick="location.href='old_city';">
 <form name="input" action="review" method="post">
 	{% csrf_token %}
 	<input id="{{ pageShop.name }}" type="hidden" value="{{ pageShop.name }}" name="shop">
-	
-	<form>
+
 		<a href ="#" class="button orange" onclick="javascript:add_review()">add review</a>
-		
-	</form>
-	
+
 	<div id="addReview">
 	<table id="t2">	<tr>
 			<td>
@@ -131,7 +128,7 @@ border-width: 2px;"onclick="location.href='old_city';">
 			</td>
 		</tr>
 	</table>
-		<button type="submit" value="submit" href ="#" class="button orange">submit</button>
+		<button type="submit" value="submit"<a href ="#" class="button orange"></a>submit</button>
 		</form>
 	</div>
 	<br>
