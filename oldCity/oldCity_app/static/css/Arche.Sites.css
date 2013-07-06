@@ -1,6 +1,7 @@
 h1 {color : #DB944D; font-size :100px;font-weight : bold;text-shadow ;text-align:center;
 text-shadow: 5px 5px 5px #000000;}
-body {color : #FFCC66; font-size :25px;text-shadow ;text-align:center;text-shadow: 1px 1px 1px #ffffff;}
+span {text-align:left;}
+div {color : #FFCC66; font-size :25px;text-shadow ;text-align:center;text-shadow: 1px 1px 1px #ffffff;}
 
  #i{
         -moz-box-shadow:inset 0px 1px 0px 0px #efdcfb;
