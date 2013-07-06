@@ -1,6 +1,7 @@
 h1 {color : #DB944D; font-size :100px;font-weight : bold;text-shadow ;text-align:center;
 text-shadow: 5px 5px 5px #000000;}
-body {color : #DB944D; font-size :20px}
+
+div {color : #DB944D; font-size :20px;text-align:center;}
 h1 {color : #DB944D;font-weight : bold;text-shadow ;text-align:center;text-shadow: 5px 5px 5px #FFCC66;}
 
 .button {
