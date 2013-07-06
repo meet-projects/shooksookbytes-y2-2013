@@ -34,9 +34,11 @@ display:none;
 
 </head>
 <body>
-<div>
-<input id=q type="button" name="button" value="Home" onclick="location.href='../';">
+	
+<div id="home_button">
+	<a href ="#" class="button orange"  onclick="location.href='../';">Home</a>
 </div>
+<h1>Forum</h1>
 
 <form name="input" action="addQuestion" method="post">
 {% csrf_token %}
