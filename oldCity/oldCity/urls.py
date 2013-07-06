@@ -25,7 +25,8 @@ urlpatterns = patterns('',
     url(r'^addComment',views.addComment),
     url(r'^removeReview',views.removeReview),
     url(r'^ads',views.ads),
-    
+	url(r'^map',views.goToMap),
+
     # Examples:
     # url(r'^$', 'oldCity.views.home', name='home'),
     # url(r'^oldCity/', include('oldCity.foo.urls')),

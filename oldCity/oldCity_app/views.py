@@ -94,3 +94,6 @@ def goToArche_Sites(request):
 	
 def goToResturants(request):
 	return render(request,'oldCity_app/Resturants.html')
+	
+def goToMap(request):
+	return render(request,'oldCity_app/map.html')
